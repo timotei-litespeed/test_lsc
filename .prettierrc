@@ -13,9 +13,7 @@
 			}
 		}
 	],
-	"plugins": [
-		"@prettier/plugin-php"
-	],
+	"plugins": ["@prettier/plugin-php"],
 	"arrowParens": "avoid",
 	"braceStyle": "per-cs",
 	"endOfLine": "auto",
