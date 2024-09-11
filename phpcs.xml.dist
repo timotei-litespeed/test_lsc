@@ -53,6 +53,7 @@
 	-->
 
 	<config name="testVersion" value="7.2-"/>
+	<config name="colors " value="1"/>
 
 	<rule ref="PHPCompatibility">
 		<!-- Exclude false positives -->
