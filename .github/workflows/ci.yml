@@ -44,7 +44,7 @@ jobs:
           check-latest: true
           cache: npm
           cache-dependency-path: package-lock.json
-      - name: 'Create folder .cache'
+      - name: 'Create folder .cache s'
         run: |
           mkdir -p .cache && cd .cache && touch .gitkeep
 
