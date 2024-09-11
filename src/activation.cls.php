@@ -78,7 +78,7 @@ class Activation extends Base
 				}
 			}
 		}
-
+		echo '';
 		if (defined('LSCWP_REF') && LSCWP_REF == 'whm') {
 			GUI::update_option(GUI::WHM_MSG, GUI::WHM_MSG_VAL);
 		}
