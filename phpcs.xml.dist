@@ -63,6 +63,8 @@
 		<exclude name="PHPCompatibility.Constants.NewConstants.php_int_minFound" />
 		<!-- hash_equals is defined by WordPress if needed -->
 		<exclude name="PHPCompatibility.FunctionUse.NewFunctions.hash_equalsFound" />
+		<!-- array_key_firstFound is defined in plugin/lib -->
+		<exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_key_firstFound" />
 	</rule>
 
 </ruleset>
