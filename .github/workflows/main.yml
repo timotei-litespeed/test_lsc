@@ -28,10 +28,13 @@ jobs:
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
       # Initialize Composer
+      # Will throw error to upgrade to Composer V2.
+      # We stick to V1 because of PHP 7.2 usage. https://github.com/marketplace/actions/composer-update-action
       - uses: php-actions/composer@v6
         env:
           COMPOSER: 'composer.json'
         with:
+          composer_version: 1
           php_version: '7.2'
           version: 1
 
