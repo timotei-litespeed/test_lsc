@@ -1,6 +1,7 @@
 **/*.min.*
 **/*.ori.*
 **/*.tpl.php
+composer.json
 composer.lock
 package-lock.json
 vendor
