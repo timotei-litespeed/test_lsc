@@ -5,7 +5,6 @@
 	},
 	"prefer-stable": true,
 	"scripts": {
-		"pre-install-cmd": "mkdir .cache",
 		"post-install-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
 		"post-update-cmd": "\"vendor/bin/phpcs\" --config-set installed_paths vendor/phpcompatibility/php-compatibility",
 		"sniff-check": "./vendor/bin/phpcs -p . --standard=./phpcs.xml.dist"
