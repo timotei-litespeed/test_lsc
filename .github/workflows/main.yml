@@ -37,6 +37,14 @@ jobs:
           php_version: '7.2'
           version: 1
 
+      # Run PHP Code sniffer
+      - name: PHP Code Sniffer
+        uses: php-actions/phpcs@v1
+        with:
+          php_version: 8.1
+          path: ./
+          standard: phpcs.xml
+
       # Initialize Node
       - uses: actions/setup-node@v3
         with:
@@ -48,5 +56,3 @@ jobs:
       - run: npm ci
 
       - run: npm run format-check
-      - run: '> ./.cache/phpcs.json'
-      - run: composer run sniff-check
