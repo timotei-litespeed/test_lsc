@@ -37,7 +37,7 @@ jobs:
           php_version: '7.2'
           version: 1
 
-      # Initialize Node
+      # Initialize Node.js
       - uses: actions/setup-node@v3
         with:
           node-version: '20'
