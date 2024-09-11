@@ -28,6 +28,8 @@
 
 	<!-- Show sniff codes in all reports -->
 	<arg value="ps"/>
+	
+	<arg name="parallel" value="8"/>
 
 	<!--
 	#############################################################################
