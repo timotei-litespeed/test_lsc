@@ -4,8 +4,7 @@
 	"license": "GPLv3",
 	"scripts": {
 		"format": "prettier --write . '**/*.{js,css,php}'",
-		"format-check": "prettier --check . '**/*.{js,css,php}'",
-		"sniff-check": "phpcs -p . --standard=./phpcs.xml.dist"
+		"format-check": "prettier --check . '**/*.{js,css,php}'"
 	},
 	"devDependencies": {
 		"@prettier/plugin-php": "^0.21.0",

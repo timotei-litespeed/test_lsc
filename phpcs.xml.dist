@@ -52,7 +52,6 @@
 	-->
 
 	<config name="testVersion" value="7.2-"/>
-	<config name="installed_paths" value="C:\Users\bonda\AppData\Roaming\Composer\vendor\phpcompatibility\php-compatibility\PHPCompatibility"/>
 
 	<rule ref="PHPCompatibility">
 		<!-- Exclude false positives -->
