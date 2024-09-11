@@ -41,9 +41,8 @@ jobs:
       - name: PHP Code Sniffer
         uses: php-actions/phpcs@v1
         with:
-          php_version: 8.1
           path: ./
-          standard: phpcs.xml
+          standard: phpcs.xml.dist
 
       # Initialize Node
       - uses: actions/setup-node@v3
