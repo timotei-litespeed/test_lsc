@@ -3,6 +3,7 @@ name: CI
 on:
   push:
     branches:
+      - main
       - master
       - dev
       - 'v*.*'
@@ -43,8 +44,10 @@ jobs:
           check-latest: true
           cache: npm
           cache-dependency-path: package-lock.json
+      - name: 'Create folder .cache'
+        run: |
+          mkdir -p .cache && cd .cache && touch .gitkeep
 
       - run: npm ci
-
       - run: npm run format-check
       - run: composer run sniff-check
