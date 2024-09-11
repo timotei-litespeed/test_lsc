@@ -1,0 +1,9 @@
+*.local
+*.log
+*.swp
+.DS_Store
+.cache
+.env*
+.vscode
+node_modules
+/vendor
