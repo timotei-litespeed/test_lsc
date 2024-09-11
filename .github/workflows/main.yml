@@ -47,9 +47,9 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
-      # - name: 'Create folder .cache s'
-      #   run: |
-      #     mkdir -p .cache && cd .cache && touch .gitkeep
+      - name: 'Create folder .cache s'
+        run: |
+          mkdir -p .cache && cd .cache && touch .gitkeep
 
       - run: npm ci
       - run: npm run format-check
