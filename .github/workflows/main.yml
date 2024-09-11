@@ -3,7 +3,6 @@ name: CI
 on:
   push:
     branches:
-      - main
       - master
       - dev
       - 'v*.*'
@@ -15,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  test:
+  checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
