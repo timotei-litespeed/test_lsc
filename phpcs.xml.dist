@@ -16,7 +16,7 @@
 	<arg name="cache" value=".cache/phpcs.json"/>
 
 	<!-- Set memory limit to 512M
-		 Ref: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#specifying-phpini-settings
+		 Ref: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Advanced-Usage#specifying-phpini-settings 
 	-->
 	<ini name="memory_limit" value="512M"/>
 
@@ -25,7 +25,7 @@
 
 	<!-- Check max 20 files in parallel -->
 	<arg name="parallel" value="20"/>
-	
+
 	<!-- Show sniff codes in all reports -->
 	<arg value="ps"/>
 
