@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="LiteSpeed_Cache" xsi:noNamespaceSchemaLocation="lsc.xsd">
+<ruleset name="LiteSpeed Cache Coding Standards">
 	<description>Apply LiteSpeed Cache Coding Standards to all plugin files</description>
 
 	<!--
@@ -26,11 +26,6 @@
 	<!-- Check max 20 files in parallel -->
 	<arg name="parallel" value="20"/>
 
-	<!-- Show sniff codes in all reports -->
-	<arg value="ps"/>
-	
-	<arg name="parallel" value="8"/>
-
 	<!--
 	#############################################################################
 	FILE SELECTION
@@ -41,7 +36,7 @@
 	<file>.</file>
 
 	<!-- Exclude any wordpress folder in the current directory -->
-	<!-- <exclude-pattern type="relative">^wordpress/*</exclude-pattern> -->
+	<exclude-pattern type="relative">^wordpress/*</exclude-pattern>
 
 	<!-- Directories and third-party library exclusions -->
 	<exclude-pattern>/node_modules/*</exclude-pattern>
@@ -53,13 +48,12 @@
 	SET UP THE RULESET
 	#############################################################################
 	-->
-
+	<!-- Check PHP v7.2 and all newer versions -->
 	<config name="testVersion" value="7.2-"/>
 
 	<rule ref="PHPCompatibility">
 		<!-- Exclude false positives -->
-
-		<!-- array_key_firstFound is defined in plugin/lib -->
+		<!-- array_key_firstFound is defined in lib/php-compatibility.func.php -->
 		<exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_key_firstFound" />
 	</rule>
 
