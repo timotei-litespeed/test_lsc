@@ -57,7 +57,7 @@
 	<rule ref="PHPCompatibility">
 		<!-- Exclude false positives -->
 		<!-- array_key_firstFound is defined in lib/php-compatibility.func.php -->
-		<!-- <exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_key_firstFound" /> -->
+		<exclude name="PHPCompatibility.FunctionUse.NewFunctions.array_key_firstFound" />
 	</rule>
 
 </ruleset>
