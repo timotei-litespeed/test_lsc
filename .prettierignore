@@ -3,6 +3,7 @@
 **/*.tpl.php
 composer.json
 composer.lock
+package.json
 package-lock.json
 vendor
 .cache
