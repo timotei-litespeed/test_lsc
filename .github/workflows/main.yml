@@ -47,8 +47,7 @@ jobs:
 
       # Make sure .cache folder exists
       - name: 'Create folder .cache s'
-        run: |
-          mkdir -p .cache && cd .cache && touch .gitkeep
+        run: mkdir -p .cache
 
       # Start actions
       - run: npm ci
