@@ -24,7 +24,7 @@ jobs:
       - name: Cache Composer dependencies
         uses: actions/cache@v3
         with:
-          path: '~/.cache'
+          path: .cache
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
       # Initialize Composer
@@ -37,6 +37,11 @@ jobs:
           php_version: '7.2'
           version: 1
 
+      - run: mkdir -p .cache
+
+      - name: Run Code Sniffer
+        run: composer run sniff-check
+
       # Initialize Node.js
       - uses: actions/setup-node@v3
         with:
@@ -45,14 +50,6 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
-      # Make sure .cache folder exists
-      # - name: 'Create folder .cache s'
-      #   run: mkdir -p .cache
-
-      # Start actions
-      - name: Run Code Sniffer
-        run: mkdir -p .cache && composer run sniff-check
-
       - run: npm ci
-      - name: Run Format checkS
+      - name: Run Format check
         run: npm run format-check
