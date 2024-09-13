@@ -50,6 +50,9 @@ jobs:
       #   run: mkdir -p .cache
 
       # Start actions
+      - name: Run Code Sniffer
+        run: mkdir -p .cache && composer run sniff-check
+
       - run: npm ci
-      - run: mkdir -p .cache && composer run sniff-check
-      - run: npm run format-check
+      - name: Run Format checkS
+        run: npm run format-check
