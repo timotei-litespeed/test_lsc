@@ -24,7 +24,7 @@ jobs:
       - name: Cache Composer dependencies
         uses: actions/cache@v3
         with:
-          path: .cache
+          path: '~/.cache'
           key: ${{ runner.os }}-${{ hashFiles('**/composer.lock') }}
 
       # Initialize Composer
@@ -46,8 +46,8 @@ jobs:
           cache-dependency-path: package-lock.json
 
       # Make sure .cache folder exists
-      - name: 'Create folder .cache s'
-        run: mkdir -p .cache
+      # - name: 'Create folder .cache s'
+      #   run: mkdir -p .cache
 
       # Start actions
       - run: npm ci
