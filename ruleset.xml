@@ -11,7 +11,9 @@
     </description>
 
     <!-- Import the entire unused code rule set -->
+    <rule ref="rulesets/codesize.xml" />
     <rule ref="rulesets/unusedcode.xml" />
+    <rule ref="rulesets/naming.xml" />
 
     <!--
         Import the entire cyclomatic complexity rule and
