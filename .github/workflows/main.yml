@@ -52,5 +52,6 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
 
+      - run: npm ci
       - name: Run Format check
         run: npm run format-check
