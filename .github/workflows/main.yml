@@ -44,6 +44,9 @@ jobs:
       - name: Run Code Sniffer
         run: composer run sniff-check
 
+      - name: Run Mess detector
+        run: composer run mess-check
+
       # Initialize Node.js
       - uses: actions/setup-node@v3
         with:
