@@ -30,12 +30,12 @@ jobs:
       # Initialize Composer
       # Use v1; v2 throws an error due to PHP v7.2 support
       # Ref: https://github.com/marketplace/actions/composer-update-action
-      - uses: php-actions/composer@v6
-        env:
-          COMPOSER: 'composer.json'
-        with:
-          php_version: '7.2'
-          version: 1
+      # - uses: php-actions/composer@v6
+      #   env:
+      #     COMPOSER: 'composer.json'
+      #   with:
+      #     php_version: '7.2'
+      #     version: 1
 
       - run: mkdir -p .cache
 
