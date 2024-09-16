@@ -394,14 +394,17 @@ class Admin_Display extends Base
 			$msgs = array($msgs);
 		}
 
-		$color_map = array(
+		$color_map = 
+		array(
 			'info' => self::NOTICE_BLUE,
 			'note' => self::NOTICE_YELLOW,
 			'success' => self::NOTICE_GREEN,
 			'error' => self::NOTICE_RED,
 		);
-		if (empty($color_map[$color_mode])) {
-			self::debug('Wrong admin display color mode!');
+		if (empty
+		($color_map[$color_mode])) {
+			self::
+			debug('Wrong admin display color mode!');
 			return;
 		}
 		$color = $color_map[$color_mode];
